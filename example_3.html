@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 60px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 25px;
+            width: 2px;
+            background-color: blue;
+            z-index: -1;
+        }
+
+        .event {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .event-icon {
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            font-size: 12px;
+            text-align: center;
+            margin-right: 10px;
+        }
+
+        .event-text {
+            font-size: 14px;
+            color: black;
+            position: absolute;
+            left: 60px;
+            transform: translateX(-50%);
+        }
+
+        .event-description {
+            margin-left: 20px;
+            font-size: 14px;
+            color: black;
+        }
+    </style>
+    <title>Timeline</title>
+</head>
+<body>
+    <div class="timeline">
+        <div class="event">
+            <div class="event-icon"></div>
+            <div class="event-description">Exmaple test 1</div>
+            <span class="event-text" style="top: -10px;">Last 24 hrs</span>
+        </div>
+        <div class="event">
+            <div class="event-icon"></div>
+            <div class="event-description">Exmaple test 2</div>
+        </div>
+        <div class="event">
+            <div class="event-icon"></div>
+            <div class="event-description">Exmaple test 3</div>
+        </div>
+        <div class="event">
+            <div class="event-icon"></div>
+            <div class="event-description">Exmaple test 4</div>
+            <span class="event-text" style="top: 110px;">Last 7 days</span>
+        </div>
+        <div class="event">
+            <div class="event-icon"></div>
+            <div class="event-description">Exmaple test 5</div>
+        </div>
+    </div>
+</body>
+</html>
